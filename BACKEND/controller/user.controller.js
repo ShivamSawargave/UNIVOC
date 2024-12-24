@@ -106,10 +106,7 @@ export const skill=async(req,res)=>{
             SelectBehaviouralskills: SelectBehaviouralskills
         })
         await createdUser.save()
-        res.status(200).json({message:"Thank you for showing interest, our relationship executive will get in touch with you shortly.",skills:{
-            _id:createdUser._id,
-           
-        }});
+        res.status(200).json({message:"Thank you for showing interest, our relationship executive will get in touch with you shortly."});
     }catch(error){
         console.log("Error:",error.message)
         res.status(500).json({message:"Internal server error"});
