@@ -28,6 +28,7 @@ try {
 
 app.use("/user",userRoute);
 app.use("/contactus",userRoute);
+app.use("/skills",userRoute);
 
 app.listen(PORT, () => {
     console.log(`server is listening on port ${PORT}`)

@@ -2,7 +2,7 @@
 import User from '../model/user.model.js';
 import bcryptjs from 'bcryptjs';
 import Contactus from '../model/contact.model.js';
-
+import Skills from '../model/skills.model.js';
 export const resister=async(req,res)=>{
     try{
         const {fullname,email,password,mobilenumber}=req.body;
@@ -85,3 +85,36 @@ export const contact=async(req,res)=>{
         res.status(500).json({message:"Internal server error"});
     }
 };
+
+
+
+
+
+export const skill=async(req,res)=>{
+    try{
+        const {SelectTechskills, SelectFunctionalskills, SelectBehaviouralskills}=req.body;
+        const skills=await Skills.findOne({})
+        if(skills){
+            return res.status(400).json({message:"Your request is in process, I'll contact you as soon as"})
+        }
+        
+
+        
+        const createdUser= new Skills({
+            SelectTechskills:SelectTechskills,
+            SelectFunctionalskills: SelectFunctionalskills,
+            SelectBehaviouralskills: SelectBehaviouralskills
+        })
+        await createdUser.save()
+        res.status(200).json({message:"Thank you for showing interest, our relationship executive will get in touch with you shortly.",appointmentus:{
+            _id:createdUser._id,
+            SelectTechskills:createdUser.SelectTechskills,
+            electFunctionalskills:createdUser.electFunctionalskills,
+            SelectBehaviouralskills:createdUser.SelectBehaviouralskills,
+        }});
+    }catch(error){
+        console.log("Error:",error.message)
+        res.status(500).json({message:"Internal server error"});
+    }
+};
+

@@ -8,7 +8,7 @@ const BACKEND_URL = import.meta.env.VITE_BACKEND_URL
 
 function Banner() {
     const location = useLocation();
-    const from = location.state?.pathname || "/MsgAppointment"
+    const from = location.state?.pathname || "/"
     const navigate = useNavigate();
     const {
         register,
