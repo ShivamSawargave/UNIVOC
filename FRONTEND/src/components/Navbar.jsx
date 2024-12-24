@@ -27,24 +27,24 @@ function Navbar() {
   }, [])
   const navItems = (
     <>
-      <li>
+      
         <a href="/" className="text-black md:text-white">
           {" "}
           <details className="dropdown">
             <summary className="btn md:mx-4 m-1 text-blue-500 collapse-arrow border-2 border-blue-500">
               Exploire
             </summary>
-            <ul className="menu dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
-              <li>
+            <div className="menu dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+              
                 <a href="/Banner" className="text-black">About</a>
-              </li>
-              <li>
+             
+              
                 <a href="/Contact" className="text-black">Contact</a>
-              </li>
-            </ul>
+              </div>
+            
           </details>
         </a>
-      </li>
+      
     </>
   );
   return (
@@ -86,15 +86,15 @@ function Navbar() {
                 className="font-bold text-sm cursor-pointer flex justify-between"
                 href="/"
               >
-                <div>
+                
                   <img src="logo.png" alt="" className="h-4 md:h-10  mt-1" />
-                </div>
+                
               </a>
               <div className="navbar-center hidden lg:flex">
-                            <ul className="menu menu-horizontal px-1">
-                                {navItems}
-                            </ul>
-                        </div>
+                <ul className="menu menu-horizontal px-1">
+                  {navItems}
+                </ul>
+              </div>
             </div>
             <div className="navbar-end space-x-3">
               <div className="navbar-center hidden lg:flex">

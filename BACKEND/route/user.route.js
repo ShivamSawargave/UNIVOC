@@ -7,6 +7,6 @@ const router = express.Router();
 
 router.post("/resister",resister);
 router.post("/signin",signin);
-router.post("contact",contact);
+router.post("/contact",contact);
 
 export default router

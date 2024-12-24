@@ -60,7 +60,8 @@ function Contact() {
                         </div>
                     </div>
                     <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-                        <form className="card-body bg-base-200">
+                        <div className="card-body bg-base-200">
+                        
                             <div className='bg-blue-400 ml-2 p-4 rounded-3xl'>
                                 <div className='flex md:flex-row flex-col m-2 justify-evenly'>
 
@@ -136,9 +137,9 @@ function Contact() {
                                     </div>
                                 </form></a>
                             </div>
-
-                        </form>
-                    </div>
+                            </div>
+                        </div>
+                   
                 </div >
             </div >
         </>
