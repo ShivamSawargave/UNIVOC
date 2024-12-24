@@ -108,9 +108,7 @@ export const skill=async(req,res)=>{
         await createdUser.save()
         res.status(200).json({message:"Thank you for showing interest, our relationship executive will get in touch with you shortly.",skills:{
             _id:createdUser._id,
-            SelectTechskills:createdUser.SelectTechskills,
-            electFunctionalskills:createdUser.electFunctionalskills,
-            SelectBehaviouralskills:createdUser.SelectBehaviouralskills,
+           
         }});
     }catch(error){
         console.log("Error:",error.message)
